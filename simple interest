@@ -1,0 +1,13 @@
+public class SimpleInterestCalculator {
+    public static void main(String[] args) {
+        double principal = 1000;
+        int years = 2;
+        double seniorCitizenInterest = calculateSimpleInterest(principal, years, 12);
+        double otherCustomerInterest = calculateSimpleInterest(principal, years, 10);
+        System.out.println("Simple Interest for Senior Citizen: $" + seniorCitizenInterest);
+        System.out.println("Simple Interest for Other Customers: $" + otherCustomerInterest);
+    }
+    public static double calculateSimpleInterest(double principal, int years, double rate) {
+        return (principal * years * rate) / 100;
+    }
+}
