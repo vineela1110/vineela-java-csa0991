@@ -1,0 +1,15 @@
+import java.util.Scanner;
+public class UserNameValidator {
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the user name: ");
+        String userName1 = input.nextLine();
+        System.out.print("Reenter the user name: ");
+        String userName2 = input.nextLine();
+        if (userName1.equals(userName2)) {
+            System.out.println("User name is Valid");
+        } else {
+            System.out.println("User name is Invalid");
+        }
+    }
+}
