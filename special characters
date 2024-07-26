@@ -1,0 +1,16 @@
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+public class SpecialCharactersCounter {
+    public static void main(String[] args) {
+        String line = "Hello! How are you? #SpecialChars! 123";
+        Pattern pattern = Pattern.compile("[^a-zA-Z0-9\\s]");
+        Matcher matcher = pattern.matcher(line);
+        int count = 0;
+        System.out.println("Special Characters in the Line:");
+        while (matcher.find()) {
+            System.out.println(matcher.group());
+            count++;
+        }
+        System.out.println("Number of Special Characters: " + count);
+    }
+}
